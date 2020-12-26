@@ -14,15 +14,17 @@ namespace Sudoku
         _7 = 1 << 7,
         _8 = 1 << 8,
         _9 = 1 << 9,
-        _Any = _1 | _2 | _3 | _4 | _5 | _6 | _7 | _8 | _9,  
+        _Any = _1 | _2 | _3 | _4 | _5 | _6 | _7 | _8 | _9,
     }
 
     public static class NumberEx
     {
         public const int Unknown = 0;
-        
-        public static void Remove(this ref NumberSet numberSet, int number) => numberSet &= ~(NumberSet)(1 << number);
-        
-        public static bool Contains(this NumberSet numberSet, int number) => numberSet.HasFlag((NumberSet)(1 << number));
+
+        public static void Remove(this ref NumberSet numberSet, int number) =>
+            numberSet &= ~(NumberSet) (1 << number);
+
+        public static bool Contains(this NumberSet numberSet, int number) =>
+            numberSet.HasFlag((NumberSet) (1 << number));
     }
 }
