@@ -5,8 +5,10 @@ Packages/
 private
 
 # Compiling result files
-Bin/
-Obj/
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
 
 # Visual Studion and ReSharper files
 _ReSharper.Caches/
